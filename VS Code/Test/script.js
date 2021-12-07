@@ -10,8 +10,12 @@ let ArrayOfBacgroudColor1 = ["#ccffe6","#b3ffd9","#99ffcc","#80ffbf","#66ffb3","
 let ArrayOfBacgroudColor2 = ["#ffcccc","#ffb3b3","#ff9999","#ff8080","#ff6666","#ff4d4d","#ff3333","#ff1a1a","#ff0000","#e60000","#cc0000","#b30000","#990000","#800000"];
 //["#cc0000","#e60000","#ff0000","#ff1a1a", "#ff3333","#ff4d4d","#ff6666","#ff8080", "#ff9999", "#ffb3b3", "#ffcccc", "#b3b3b3", "#ccffeb", "#b3ffe0", "#99ffd6", "#80ffcc", "#66ffc2", "#4dffb8","#33ffad"];
 
+//value of the background coltainer
+let valueOfBackground = document.getElementById("valueOfBackground");
+
 
 let number = 0;
+
 
 
 
@@ -36,14 +40,21 @@ buttonIncrease.addEventListener("click", function (){
   
 if(numberForArray){
     bacgroudColorContainer.style.backgroundColor = ArrayOfBacgroudColor1[numberForArray];
+    valueOfBackground.innerText = ArrayOfBacgroudColor1[numberForArray];
+    valueOfBackground.style.visibility = "visible";
+    // valueOfBackground.style.color = Udelat jiny pole barev (potom udelat stejne barevnej border)
     if(number < 0){
         console.log("zaporny");
         bacgroudColorContainer.style.backgroundColor = ArrayOfBacgroudColor2[numberForArray];
+        valueOfBackground.innerText = ArrayOfBacgroudColor2[numberForArray];
+        valueOfBackground.style.visibility = "visible";
+        //valueOfBackground.style.color = "blue";
     }
-    
+
 }
 if(number==0){
     bacgroudColorContainer.style.backgroundColor = "#b3b3b3";
+    valueOfBackground.innerText = "#b3b3b3";
 }
 
 
@@ -91,13 +102,18 @@ buttonDecrease.addEventListener("click", function (){
   
     if(numberForArray){
         bacgroudColorContainer.style.backgroundColor = ArrayOfBacgroudColor1[numberForArray];
+        valueOfBackground.innerText = ArrayOfBacgroudColor1[numberForArray];
+        valueOfBackground.style.visibility = "visible";
         if(number < 0){
             console.log("zaporny");
             bacgroudColorContainer.style.backgroundColor = ArrayOfBacgroudColor2[numberForArray];
+            valueOfBackground.innerText = ArrayOfBacgroudColor2[numberForArray];
+            valueOfBackground.style.visibility = "visible";
         }
     }
     if(number==0){
         bacgroudColorContainer.style.backgroundColor = "#b3b3b3";
+        valueOfBackground.innerText = "#b3b3b3";
     }
     
     /*if(number==-1  || number==1){
@@ -136,6 +152,7 @@ buttonReset.onclick = function btnClick(){
    if (number===0){
         valueOfNumber.style.color = "black";
        bacgroudColorContainer.style.backgroundColor = "#b3b3b3";
+       valueOfBackground.innerText = "#b3b3b3";
       /* if(number==0){
         bacgroudColorContainer.style.backgroundColor = "grey"; 
     }*/
