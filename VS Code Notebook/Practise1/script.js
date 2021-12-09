@@ -12,8 +12,8 @@ let ArrayOfBacgroudColor2 = ["#ffcccc","#ffb3b3","#ff9999","#ff8080","#ff6666","
 
 //value of the background coltainer
 let valueOfBackground = document.getElementById("valueOfBackground");
-let arrayForText1 = ["#800000","#990000","#b30000","#cc0000","#e60000","#ff0000","#ff1a1a","#ff3333","#ff4d4d","#ff6666","#ff8080","#ff9999","#ffb3b3","#ffcccc","","","","","",""];
-let arrayForText2 = ["#206020","#267326","#2d862d","#339933","#39ac39","#40bf40","#53c653","#66cc66","#79d279","#8cd98c","#9fdf9f","#b3e6b3","#c6ecc6","#d9f2d9","","","","","","","","","","",""];
+let arrayForText1 = ["#800000","#990000","#b30000","#cc0000","#e60000","#ff0000","#ff1a1a","#ff3333","#ff4d4d","#ff6666","#ff8080","#ff9999","#ffb3b3","#ffcccc"];
+let arrayForText2 = ["#206020","#267326","#2d862d","#339933","#39ac39","#40bf40","#53c653","#66cc66","#79d279","#8cd98c","#9fdf9f","#b3e6b3","#c6ecc6","#d9f2d9"];
 
 
 let number = 0;
@@ -36,8 +36,6 @@ buttonIncrease.addEventListener("click", function (){
         valueOfNumber.style.color = "black";
     }
 
-
-
     numberForArray = Math.abs(number);
   
 if(numberForArray){
@@ -45,12 +43,14 @@ if(numberForArray){
     valueOfBackground.innerText = ArrayOfBacgroudColor1[numberForArray];
     valueOfBackground.style.visibility = "visible";
     valueOfBackground.style.color = arrayForText1[numberForArray];
+    bacgroudColorContainer.style.borderColor = arrayForText1[numberForArray] ;
     if(number < 0){
         console.log("zaporny");
         bacgroudColorContainer.style.backgroundColor = ArrayOfBacgroudColor2[numberForArray];
         valueOfBackground.innerText = ArrayOfBacgroudColor2[numberForArray];
         valueOfBackground.style.visibility = "visible";
         valueOfBackground.style.color = arrayForText2[numberForArray];
+        bacgroudColorContainer.style.borderColor = arrayForText2[numberForArray] ;
     }
 
 }
@@ -58,6 +58,8 @@ if(number==0){
     bacgroudColorContainer.style.backgroundColor = "#b3b3b3";
     valueOfBackground.innerText = "#b3b3b3";
     valueOfBackground.style.color = "black";
+    bacgroudColorContainer.style.borderColor = "black";
+
 }
 
 
@@ -108,6 +110,7 @@ buttonDecrease.addEventListener("click", function (){
         valueOfBackground.innerText = ArrayOfBacgroudColor1[numberForArray];
         valueOfBackground.style.visibility = "visible";
         valueOfBackground.style.color = arrayForText1[numberForArray];
+        bacgroudColorContainer.style.borderColor = arrayForText1[numberForArray] ;
 
         if(number < 0){
             console.log("zaporny");
@@ -115,6 +118,7 @@ buttonDecrease.addEventListener("click", function (){
             valueOfBackground.innerText = ArrayOfBacgroudColor2[numberForArray];
             valueOfBackground.style.visibility = "visible";
             valueOfBackground.style.color = arrayForText2[numberForArray];
+            bacgroudColorContainer.style.borderColor = arrayForText2[numberForArray] ;
 
         }
     }
@@ -122,6 +126,7 @@ buttonDecrease.addEventListener("click", function (){
         bacgroudColorContainer.style.backgroundColor = "#b3b3b3";
         valueOfBackground.innerText = "#b3b3b3";
         valueOfBackground.style.color = "black";
+        bacgroudColorContainer.style.borderColor = "black";
     }
     
     /*if(number==-1  || number==1){

@@ -50,10 +50,11 @@ html {
     float: left;
     margin-left: 350px;
     margin-top: -200px;
-    border: 3px solid black;
+    border: 6px solid black;
     border-radius: 43px;
     width: 190px;
     max-width: 190px;
+
   }
   
   #valueOfBackground {
@@ -65,4 +66,40 @@ html {
     justify-content: center;
     font-weight: bolder;
     visibility: hidden;
+  }
+
+  /*Calculator*/
+  #calculator-container{
+    display: grid;
+    justify-content: end;
+    grid-template-areas:  "result1 result2"
+                          "btn_plus  btn_minus";
+    float: right;
+    margin-right: 120px;
+    grid-gap: 5px;
+  }
+
+  #result1{
+    grid-area: result1;
+  }
+  #result2{
+    grid-area: result2;
+  }
+  #btn_plus{
+    grid-area: btn_plus;
+  }
+  #btn_minus{
+    grid-area: btn_minus;
+  }
+
+  #btn_plus, #btn_minus{
+    font-size: 50px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  #result1, #result2{
+    border: 2px solid black;
+    padding-bottom: 40px;
+    margin: 0;
+    text-justify: center; /* vycentrovat text uplne doprostred ne jenom nahoru doprostred*/
   }
